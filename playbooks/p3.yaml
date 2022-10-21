@@ -1,0 +1,14 @@
+- personal1:
+    name: lalu
+    job: Developer
+    skills:
+      - python
+      - perl
+      - pascal
+- personal2:
+    name: kishor
+    job: Developer
+    skills:
+      - jsp
+      - jBoss
+      - java
