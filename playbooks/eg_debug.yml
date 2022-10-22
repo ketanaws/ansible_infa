@@ -1,0 +1,12 @@
+---
+
+- hosts: adminserver
+
+  tasks:
+  
+    - name: print message using debug
+      debug: 
+        msg: "Hello we are leaving Ansible"
+
+    - debug:
+        msg: "Hello ketan"      
