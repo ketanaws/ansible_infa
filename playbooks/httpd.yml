@@ -1,0 +1,22 @@
+---
+
+  - hosts: adminserver
+    vars: 
+      service_name: httpd
+      project_root: /var/www/html
+      file_name: index.html
+
+    tasks:
+
+    - name: Install Apache Webserver
+      yum : pkg={{ service_name }} state=latest
+    - name: Place the index file at project root
+      copy: src=index.html dest={{ project_root }}/{{ file_name }}
+    - name: Enable Apache on system reboot 
+      service: name={{ service_name }} enabled=yes
+      notify: restart apache
+    handlers:   
+
+    - name: restart apache
+      service: name={{ service_name }} state=restarted
+
