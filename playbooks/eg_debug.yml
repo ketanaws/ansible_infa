@@ -9,4 +9,19 @@
         msg: "Hello we are leaving Ansible"
 
     - debug:
-        msg: "Hello ketan"      
+        msg: "Hello ketan"
+
+  vars:
+    name: Arpita
+    lastname: Naik
+
+  tasks:
+
+    - debug: 
+        msg: "user name is {{ name }}"
+
+    - debug: 
+        msg: " My os is {{  ansible_distribution }}"
+
+    - debug:
+        msg: "my python version is {{ ansible_python_version }}"    
