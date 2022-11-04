@@ -24,4 +24,7 @@
         msg: " My os is {{  ansible_distribution }}"
 
     - debug:
-        msg: "my python version is {{ ansible_python_version }}"    
+        msg: "my python version is {{ ansible_python_version }}"   
+
+    - debug: msg="Good Morning"
+
